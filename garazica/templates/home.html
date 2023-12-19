@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Moja Garazica</title>
+{% load static %}
+<link rel = "stylesheet" type = "text/css" href = "{% static 'garage.css' %}"/>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    var ajaxHandlerUrl = "{% url 'ajax_handler' %}";
+    var csrfToken = "{{ csrf_token }}";
+</script>
+
+<script src="{% static 'garage.js' %}"></script>
+</head>
+<body>
+<h1 class = "title">Moja Garazica</h1>
+<h2 class = "adresa">Japeticka ulica 7</h2>
+<div class = "container">
+    <div class = "funkcije">
+        <p class = "text"> Garazna vrata su: otvorena/zatvorena</p>
+        <p class = "text"> Jojoj zlocko mali ostavil si garazna vrata otvorena</p>
+        <button class="gumb" id = "up">UP</button><br/>
+        <button class="gumb" id = "stop">STOP</button><br/>
+        <button class="gumb" id = "down">DOWN</button>
+    </div>
+    <div class = "logs">
+        <p>Logs</p>
+    </div>
+</div>
+
+
+</body>
+</html>
