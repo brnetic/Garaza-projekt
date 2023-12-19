@@ -15,6 +15,7 @@ def ajax_handler(request):
         data = {
             'message': 'This is a response from the Django view!'
         }
+        # tu stavi kod za funkciju up
         return JsonResponse(data)
 
     else:
@@ -28,6 +29,7 @@ def stop(request):
         data = {
             'message': 'This is a response from the Django view!, stop'
         }
+        # tu stavi kod za funkciju stop
         return JsonResponse(data)
 
     else:
@@ -40,7 +42,9 @@ def down(request):
         # Handle the POST request
         data = {
             'message': 'This is a response from the Django view!, down'
+            
         }
+        # tu stavi kod za funkciju down
         return JsonResponse(data)
 
     else:
